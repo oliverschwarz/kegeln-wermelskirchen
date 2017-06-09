@@ -13,7 +13,11 @@ Header always append X-Frame-Options NONE
 # http://stackoverflow.com/questions/9090577/what-is-the-http-header-x-xss-protection
 Header set x-xss-protection "1; mode=block"
 
-# Enforce https/443
+# Error documents
+ErrorDocument 404 /fehler.html
+ErrorDocument 500 /fehler.html
+
+# Enforce no-www
 <IfModule mod_rewrite.c>
 
     RewriteEngine On
