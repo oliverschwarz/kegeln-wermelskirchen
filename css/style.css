@@ -368,11 +368,17 @@ textarea {
   ========================================================================== */
 
 body { font: 100%/1.5 Arial, Helvetica, sans-serif; padding: .5em; }
-section, footer { margin: 0 auto; max-width: 100%; width: 48em; }
+#top, section, footer { margin: 0 auto; max-width: 100%; width: 48em; }
 h1 { font-size: 2.5em; color: darkblue; margin: 0; }
-h2 { font-size: 1em; font-weight: normal; text-transform: uppercase; letter-spacing: .2em; margin: 2em 0 1em; background-color: #999; color: #fff; padding: .5em; }
-footer nav ul { list-style: none; margin: 0; padding: 0; }
-footer nav ul li { float: left; margin: 0 1em 0 0; }
+h2 { margin: 0; padding: 0; }
+
+section header { background-color: #ddd; margin: 2em 0 0 0; padding: .5em; }
+section header h2 { float: left; width: 70%; }
+.toplink { float: right; width: 29%; line-height: 2.25; text-align: right; }
+
+nav { margin: 1.5em 0; }
+nav ul { list-style: none; margin: 0; padding: 0; }
+nav ul li { float: left; margin: 0 1em 0 0; }
 
 /* micro-clearfix: http://nicolasgallagher.com/micro-clearfix-hack/ */
 .cf:before,
@@ -387,6 +393,10 @@ footer nav ul li { float: left; margin: 0 1em 0 0; }
 }
 
 @media (min-width: 667px) {
-  section, footer { width: 40em; }
+  body { font-size: 150%; }
+  #top, section, footer { width: 40em; }
   h1 { font-size: 3em; }
+}
+@media {min-width: 887px} {
+  body { font-size: 150%; }
 }
